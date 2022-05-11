@@ -1,0 +1,51 @@
+@import '../../../Variable.scss';
+
+.container{
+    background: linear-gradient(to right, rgb(29, 78, 216), rgb(30, 64, 175), rgb(17, 24, 39));
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.533);
+    color: $primary-light;
+    width: 50%;
+    padding: 2%;
+    position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+    border-radius: 20px;
+    z-index: 5;
+    ul{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: flex-end;
+        li{
+            margin: 0 5px;
+        }
+    }
+    .hint{
+        justify-content: center;
+        color: $warning;
+        font-size: 15px;
+        font-weight: lighter;
+        li{
+            margin: 0 2px;
+        }
+    }
+}
+
+img{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+
+}
+
+@media (max-width : 768px){
+    .container{
+        position: static;
+        transform: none;
+        width: 95%;
+    }
+    img{
+        bottom: 0;
+    }
+}

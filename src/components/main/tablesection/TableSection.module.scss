@@ -1,0 +1,19 @@
+@import '../../../Variable.scss';
+
+.tablecontainer{
+    width: 70%;
+    height: 480px;
+    margin-top: 20px;
+    border: 1px solid $dark;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.tableheadbtn{
+    color: $dark !important;
+    border: 1px solid $dark !important;
+}
+
+.row{
+    background-color: lawngreen !important;
+}
