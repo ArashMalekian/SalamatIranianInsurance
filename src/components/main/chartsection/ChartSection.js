@@ -32,9 +32,8 @@ export const ChartSection = () => {
   })
   const [chartOption, setChartOption] = useState()
    useEffect(() => {
-     return () => {
-       var pChart = []
-       for(var i = 0 ; i < 11 ; i++){
+     var pChart = []
+     for(var i = 0 ; i < 11 ; i++){
          pChart.push(
            { 
              InstrumentID : context.pieChart.InstrumentID[i],
@@ -42,34 +41,35 @@ export const ChartSection = () => {
              value : context.pieChart.value[i],
              percent : context.pieChart.percent[i],
              id : i
-           }
-         )
-       }
-       console.log(pChart);
-       setChartData({
-          labels : pChart.map(item => item.name),
-         datasets : [{
-           label:"نمودار",
-           data : pChart.map(item => (item.percent*100).toFixed(0)),
-           backgroundColor : [
-             'rgba(255 , 97 , 80, 0.7)',
-             'rgba(19 , 78 , 211, 0.7)',
-             'rgba(93 , 12 , 70, 0.6)',
-             'rgba(22 , 222 , 122, 0.5)',
-             'rgba(255 , 168 , 34, 0.7)',
-             'rgba(204 , 29 , 200, 0.7)',
-             'rgba(218 , 216 , 115, 0.7)',
-             'rgba(37 , 94 , 0, 0.7)',
-             'rgba(0 , 200 , 48, 0.7)',
-             'rgba(0 , 50 , 200, 0.7)',
-             'rgba(100 , 200 , 0, 0.7)',
-           ],
-           borderWidth : 2,
-         }]
-       });
+            }
+            )
+          }
+          console.log(pChart);
+          setChartData({
+            labels : pChart.map(item => item.name),
+            datasets : [{
+              label:"نمودار",
+              data : pChart.map(item => (item.percent*100).toFixed(0)),
+              backgroundColor : [
+                'rgba(255 , 97 , 80, 0.7)',
+                'rgba(19 , 78 , 211, 0.7)',
+                'rgba(93 , 12 , 70, 0.6)',
+                'rgba(22 , 222 , 122, 0.5)',
+                'rgba(255 , 168 , 34, 0.7)',
+                'rgba(204 , 29 , 200, 0.7)',
+                'rgba(218 , 216 , 115, 0.7)',
+                'rgba(37 , 94 , 0, 0.7)',
+                'rgba(0 , 200 , 48, 0.7)',
+                'rgba(0 , 50 , 200, 0.7)',
+                'rgba(100 , 200 , 0, 0.7)',
+              ],
+              borderWidth : 2,
+            }]
+          });
+          console.log(chartData);
+          return () => {
      };
    }, [])
-  console.log(chartData);
   return (
     <div className={classes.container} >
       <h3>
